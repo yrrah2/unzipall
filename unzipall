@@ -1,0 +1,15 @@
+for file in *.zip
+do 
+
+directory=$(pwd)
+
+if unzip "$file" -d $directory/"Folder of $file"/
+then
+rm "$file"
+else
+rm -r "Folder of $file"
+
+fi
+
+done
+
